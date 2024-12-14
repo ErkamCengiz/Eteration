@@ -1,0 +1,45 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+
+    <style name="Theme.Eteration" parent="Base.Theme.Eteration" >
+        <item name="colorPrimary">@color/blue</item>
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <item name="materialButtonStyle">@style/CustomMaterialButtonStyle</item>
+    </style>
+
+    <style name="CustomBottomNavigationStyle" parent="Widget.MaterialComponents.BottomNavigationView">
+        <item name="itemIconSize">16dp</item> <!-- İkon boyutu -->
+        <item name="itemTextAppearanceActive">@style/CustomTextAppearance</item>
+        <item name="itemTextAppearanceInactive">@style/CustomTextAppearance</item>
+    </style>
+
+    <style name="AppThema" parent="Theme.MaterialComponents.DayNight.DarkActionBar.Bridge">
+        <item name="android:colorBackground">@color/app_background_color</item>
+    </style>
+
+
+    <style name="CustomMaterialButtonStyle" parent="Widget.MaterialComponents.Button">
+        <!-- Varsayılan arka plan rengi ve tint özelliğini devre dışı bırak -->
+        <item name="android:background">@drawable/button_shape</item> <!-- Kendi şekliniz -->
+        <item name="android:backgroundTint">@android:color/transparent</item> <!-- Tint rengini şeffaf yap -->
+        <item name="android:textColor">@android:color/white</item> <!-- Yazı rengini beyaz yap -->
+        <item name="cornerRadius">10dp</item> <!-- Köşe yuvarlama -->
+        <item name="elevation">5dp</item>
+    </style>
+
+    <style name="CustomTextAppearance" parent="TextAppearance.MaterialComponents.Caption">
+        <item name="android:textSize">12dp</item> <!-- Yazı boyutu -->
+    </style>
+
+    <style name="CustomSearchViewStyle" parent="Widget.AppCompat.SearchView">
+        <item name ="voiceIcon">@drawable/baseline_close_24</item>
+        <item name="searchIcon">@drawable/ic_search</item>
+        <item name="queryBackground">@color/black</item>
+        <item name="android:background">@color/black</item>
+        <item name="android:paddingBottom">20dp</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingStart">-15dp</item>
+        <item name="android:paddingEnd">15dp</item>
+        <item name="android:inputType">textCapWords</item>
+    </style>
+</resources>
