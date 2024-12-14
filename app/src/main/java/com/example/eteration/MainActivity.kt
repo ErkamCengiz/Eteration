@@ -66,12 +66,11 @@ class MainActivity : AppCompatActivity() {
     private fun filterPopupShow() {
         val popupBinding = FragmentFilterBinding.inflate(LayoutInflater.from(this))
 
-        // PopupWindow oluştur
         val popupWindow = PopupWindow(
             popupBinding.root,
             ConstraintLayout.LayoutParams.MATCH_PARENT,
             ConstraintLayout.LayoutParams.MATCH_PARENT,
-            true // Dışarıya tıklanabilir olsun
+            true
         )
 
         // Popup'un arka planını belirle (şeffaf arka plan için gerekli)
@@ -138,7 +137,6 @@ class MainActivity : AppCompatActivity() {
 
         popupBinding.title.text = title
 
-        // ListView için adapter
         val adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, items)
         popupBinding.listView.adapter = adapter
 
@@ -154,10 +152,6 @@ class MainActivity : AppCompatActivity() {
         popupWindow.showAtLocation(binding.root, Gravity.CENTER, 0, 0)
     }
 
-    /**
-     * Function: createBottomNavigation()
-     * Page Change Operation
-     */
     fun createBottomNavigation() {
         val navHostFragment = supportFragmentManager.findFragmentById(R.id.fragment_container_view) as NavHostFragment
         val navController = navHostFragment.navController

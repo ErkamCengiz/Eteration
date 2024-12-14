@@ -7,9 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
-import com.example.eteration.Models.Package
 import com.example.eteration.Models.Product
-import com.example.eteration.R
 import com.example.eteration.Utility.UrlFotoDownload
 import com.example.eteration.ViewModels.MainActivityViewModel
 import com.example.eteration.databinding.FragmentDetailBinding

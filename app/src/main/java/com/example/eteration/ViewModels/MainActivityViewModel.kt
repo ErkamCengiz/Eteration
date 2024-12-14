@@ -81,9 +81,6 @@ class MainActivityViewModel @Inject constructor(
        _filterItems.value = items
     }
 
-    /**
-     * Function: updatePackagesList()
-     */
     fun updatePackagesList(product: Product, isAdd: Boolean) {
 
         viewModelScope.launch {
@@ -91,9 +88,6 @@ class MainActivityViewModel @Inject constructor(
         }
     }
 
-    /**
-     * Function: updatePackagesList()
-     */
     fun updatePackagesList(packageItem: Package, isAdd: Boolean) {
         viewModelScope.launch {
             if (isAdd) {
@@ -104,9 +98,6 @@ class MainActivityViewModel @Inject constructor(
         }
     }
 
-    /**
-     * Function: toogleFilterVisibility()
-     */
     fun toggleFilterVisibility() {
         _isFilterVisible.value = !(_isFilterVisible.value)
     }
